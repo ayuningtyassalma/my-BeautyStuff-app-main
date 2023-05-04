@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="151" id="KGk-i7-Jjw" customClass="ColorPalleteTableViewCell" customModule="my_BeautyStuff_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="258" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="258" height="151"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-Hq-VNp">
+                        <rect key="frame" x="16" y="70" width="225" height="81"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GwG-h1-LCC">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrv-qQ-ggz">
+                        <rect key="frame" x="16" y="15.999999999999998" width="89" height="19.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2q-DK-WQi">
+                        <rect key="frame" x="16.000000000000004" y="42" width="32.333333333333343" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="i2q-DK-WQi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0Zo-za-2X0"/>
+                    <constraint firstAttribute="trailing" secondItem="SXh-Hq-VNp" secondAttribute="trailing" constant="17" id="F9n-Xc-Pkj"/>
+                    <constraint firstItem="xrv-qQ-ggz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="JG7-ma-9Mt"/>
+                    <constraint firstItem="SXh-Hq-VNp" firstAttribute="top" secondItem="i2q-DK-WQi" secondAttribute="bottom" constant="11" id="OaD-RA-NLE"/>
+                    <constraint firstItem="i2q-DK-WQi" firstAttribute="top" secondItem="xrv-qQ-ggz" secondAttribute="bottom" constant="6.6699999999999999" id="QYu-as-JC3"/>
+                    <constraint firstItem="xrv-qQ-ggz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Tcu-yd-FZ7"/>
+                    <constraint firstItem="SXh-Hq-VNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="oam-Nw-rXE"/>
+                    <constraint firstAttribute="bottom" secondItem="SXh-Hq-VNp" secondAttribute="bottom" id="ria-Wu-rua"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionVw" destination="SXh-Hq-VNp" id="kOx-0O-ikx"/>
+                <outlet property="productBrand" destination="xrv-qQ-ggz" id="9ij-gu-RaQ"/>
+                <outlet property="productPrice" destination="i2q-DK-WQi" id="E9Z-k9-3Hp"/>
+            </connections>
+            <point key="canvasLocation" x="27.480916030534349" y="57.394366197183103"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

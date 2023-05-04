@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "48A98207-B4C6-40AB-9CF3-9BED6C160500"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F1FD186-DA3C-44A8-B3E6-68146BC6F48A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-BeautyStuff-app/TABLE_CELL/CategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "setUpCollectionCell()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F1FD186-DA3C-44A8-B3E6-68146BC6F48A - fb1541578ee92ee6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.CategoriesTableViewCell.setUpCollectionCell() -&gt; ()"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/myBeautyStuff/my-BeautyStuff-app/my-BeautyStuff-app/TABLE_CELL/CategoriesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "594">
+               </Location>
+               <Location
+                  uuid = "3F1FD186-DA3C-44A8-B3E6-68146BC6F48A - fb1541578ee92ee6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.CategoriesTableViewCell.setUpCollectionCell() -&gt; ()"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/myBeautyStuff/my-BeautyStuff-app/my-BeautyStuff-app/TABLE_CELL/CategoriesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "266">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABAD2F4B-2B17-4ECB-A1CB-2975CB8CFE01"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-BeautyStuff-app/TABLE_CELL/BrandListTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "setUpCollectionCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1A27444-996A-4843-BDC4-496D4E19A419"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-BeautyStuff-app/VIEW_CONTROLLER/DetailsProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "DetailsProductViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

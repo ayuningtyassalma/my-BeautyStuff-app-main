@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BrandListCollectionViewCell" customModule="my_BeautyStuff_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNk-UX-KbW">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6c-65-2wp">
+                                <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loreal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Y0-GZ-KaO">
+                                        <rect key="frame" x="26" y="14" width="47" height="21"/>
+                                        <color key="tintColor" red="0.96862745100000003" green="0.5450980392" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" name="pink"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4Y0-GZ-KaO" firstAttribute="leading" secondItem="D6c-65-2wp" secondAttribute="leading" constant="26" id="AOd-qB-pr2"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Y0-GZ-KaO" secondAttribute="bottom" constant="13" id="DbL-Js-2Bj"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Y0-GZ-KaO" secondAttribute="trailing" constant="25" id="RuL-6S-FBY"/>
+                                    <constraint firstItem="4Y0-GZ-KaO" firstAttribute="top" secondItem="D6c-65-2wp" secondAttribute="top" constant="14" id="grQ-Oa-Jgd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="D6c-65-2wp" secondAttribute="bottom" id="2cI-6Z-T5Q"/>
+                            <constraint firstItem="D6c-65-2wp" firstAttribute="leading" secondItem="iNk-UX-KbW" secondAttribute="leading" id="LnI-cs-Ce8"/>
+                            <constraint firstAttribute="trailing" secondItem="D6c-65-2wp" secondAttribute="trailing" id="cF0-7s-BVJ"/>
+                            <constraint firstItem="D6c-65-2wp" firstAttribute="top" secondItem="iNk-UX-KbW" secondAttribute="top" id="v5z-fz-9Lb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="iNk-UX-KbW" secondAttribute="bottom" id="Co2-ed-hB2"/>
+                <constraint firstAttribute="trailing" secondItem="iNk-UX-KbW" secondAttribute="trailing" id="def-hc-XJU"/>
+                <constraint firstItem="iNk-UX-KbW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s6V-j0-klS"/>
+                <constraint firstItem="iNk-UX-KbW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tw4-Kk-TfM"/>
+            </constraints>
+            <size key="customSize" width="98" height="48"/>
+            <connections>
+                <outlet property="brandsContainer" destination="D6c-65-2wp" id="izz-cR-N6X"/>
+                <outlet property="brandsName" destination="4Y0-GZ-KaO" id="xDc-6v-olz"/>
+            </connections>
+            <point key="canvasLocation" x="96.18320610687023" y="19.014084507042256"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="pink">
+            <color red="0.96862745098039216" green="0.54509803921568623" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

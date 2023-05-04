@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="CallToActionTableViewCell" customModule="my_BeautyStuff_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="254" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnV-N9-gyt">
+                        <rect key="frame" x="52" y="21" width="150" height="35"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.5450980392" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Hwk-Nc-zvH"/>
+                            <constraint firstAttribute="width" constant="150" id="kxY-NH-mnD"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Buy Now">
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKC-mb-YGs">
+                        <rect key="frame" x="52" y="70" width="150" height="35"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Add to MyWhislist" titleAlignment="center">
+                            <color key="baseForegroundColor" name="pink"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LKC-mb-YGs" secondAttribute="trailing" constant="52" id="5BF-D7-q8B"/>
+                    <constraint firstItem="LKC-mb-YGs" firstAttribute="top" secondItem="TnV-N9-gyt" secondAttribute="bottom" constant="14" id="KHg-AX-f13"/>
+                    <constraint firstItem="LKC-mb-YGs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="52" id="Ssd-hZ-NHB"/>
+                    <constraint firstItem="TnV-N9-gyt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="dc7-f5-dUI"/>
+                    <constraint firstAttribute="bottom" secondItem="LKC-mb-YGs" secondAttribute="bottom" constant="12" id="fZF-WP-qba"/>
+                    <constraint firstAttribute="trailing" secondItem="TnV-N9-gyt" secondAttribute="trailing" constant="52" id="lcz-Yw-sOk"/>
+                    <constraint firstItem="TnV-N9-gyt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="52" id="pKC-P9-uph"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addToWishlistBtn" destination="LKC-mb-YGs" id="Tpu-NC-ZbG"/>
+                <outlet property="buyNowBtn" destination="TnV-N9-gyt" id="4bZ-yu-hxw"/>
+            </connections>
+            <point key="canvasLocation" x="-73.282442748091597" y="32.04225352112676"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="pink">
+            <color red="0.96862745098039216" green="0.54509803921568623" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
