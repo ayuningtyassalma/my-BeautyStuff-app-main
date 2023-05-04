@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,22 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-cm-jTt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HKw-rc-O7f">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="pink"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c0X-ks-kjG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eqm-cm-jTt" firstAttribute="top" secondItem="c0X-ks-kjG" secondAttribute="top" id="dI8-GO-6MR"/>
-                            <constraint firstItem="c0X-ks-kjG" firstAttribute="bottom" secondItem="eqm-cm-jTt" secondAttribute="bottom" id="iYO-eN-MHY"/>
-                            <constraint firstItem="eqm-cm-jTt" firstAttribute="leading" secondItem="c0X-ks-kjG" secondAttribute="leading" id="soT-p3-9ex"/>
-                            <constraint firstItem="c0X-ks-kjG" firstAttribute="trailing" secondItem="eqm-cm-jTt" secondAttribute="trailing" id="yPL-Gp-Ric"/>
+                            <constraint firstItem="c0X-ks-kjG" firstAttribute="trailing" secondItem="HKw-rc-O7f" secondAttribute="trailing" id="HRN-MF-pyL"/>
+                            <constraint firstItem="HKw-rc-O7f" firstAttribute="top" secondItem="c0X-ks-kjG" secondAttribute="top" id="jLc-Pf-uMc"/>
+                            <constraint firstItem="HKw-rc-O7f" firstAttribute="leading" secondItem="c0X-ks-kjG" secondAttribute="leading" id="uQE-zd-BIA"/>
+                            <constraint firstItem="c0X-ks-kjG" firstAttribute="bottom" secondItem="HKw-rc-O7f" secondAttribute="bottom" id="xLk-a6-gBE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="eqm-cm-jTt" id="5r8-lU-RHm"/>
+                        <outlet property="tableView" destination="HKw-rc-O7f" id="sdD-9O-WX4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ru-eI-9UJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,6 +166,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="pink">
+            <color red="0.96862745098039216" green="0.54509803921568623" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

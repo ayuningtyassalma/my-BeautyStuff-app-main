@@ -8,6 +8,7 @@
 import UIKit
 
 class CategoriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var landingPageDelegate : LandingPageViewControllerDelegate?
    
     static let identifier = "CategoriesTableViewCell"
     
@@ -44,5 +45,10 @@ class CategoriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("tes")
+        self.landingPageDelegate?.navigateToProductListOfCategories()
     }
 }

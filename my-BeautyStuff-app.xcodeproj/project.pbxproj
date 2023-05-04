@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -250,30 +250,15 @@
 		362CA94B29E3B26400FFEC1E /* TABLE_CELL */ = {
 			isa = PBXGroup;
 			children = (
+				36EB5B972A03A6D900E45F5E /* ShoppingChart Section */,
+				36EB5B962A03A6B400E45F5E /* ProductDetail Section */,
+				36EB5B952A03A69900E45F5E /* Banner */,
+				36EB5B942A03A66F00E45F5E /* Discount (30%) Section */,
+				36EB5B932A03A64900E45F5E /* Best Seller Section */,
+				36EB5B922A03A62300E45F5E /* Brand Section */,
 				36EB5B8C2A0393FA00E45F5E /* Categories Section */,
 				3698B1CB2A01FB870067206A /* UserRegisterPage */,
 				3698B1CA2A01FB1A0067206A /* UserLoginPage */,
-				36A2DD8529F8E3A400B20EA1 /* BrandListTableViewCell.swift */,
-				36A2DD8629F8E3A500B20EA1 /* BrandListTableViewCell.xib */,
-				36A2DD8D29F9730400B20EA1 /* BestSellerTableViewCell.swift */,
-				36D76A4929E519CC004029C5 /* BannerTableViewCell.swift */,
-				36A2DD8929F9229B00B20EA1 /* DiscountTableViewCell.swift */,
-				36A2DD8A29F9229B00B20EA1 /* DiscountTableViewCell.xib */,
-				36A2DD8E29F9730400B20EA1 /* BestSellerTableViewCell.xib */,
-				36C4A88329FD0C9100BD8B1A /* ProductImageDetailSectionTableViewCell.swift */,
-				36C4A88429FD0C9100BD8B1A /* ProductImageDetailSectionTableViewCell.xib */,
-				36C4A88729FD0ED800BD8B1A /* DescriptionProductTableViewCell.swift */,
-				36C4A88829FD0ED800BD8B1A /* DescriptionProductTableViewCell.xib */,
-				36C4A88F29FD100200BD8B1A /* ColorPalleteTableViewCell.swift */,
-				36C4A89029FD100200BD8B1A /* ColorPalleteTableViewCell.xib */,
-				362B480729FD1C9500285556 /* CallToActionTableViewCell.swift */,
-				362B480829FD1C9500285556 /* CallToActionTableViewCell.xib */,
-				3604438B2A001DBE00FBF4C5 /* ShoppingChartTableViewCell.swift */,
-				3604438C2A001DBE00FBF4C5 /* ShoppingChartTableViewCell.xib */,
-				3604438F2A00213B00FBF4C5 /* TotalPriceTableViewCell.swift */,
-				360443902A00213B00FBF4C5 /* TotalPriceTableViewCell.xib */,
-				36EC61F92A0136D000FF9EBD /* CheckOutProductTableViewCell.swift */,
-				36EC61FA2A0136D000FF9EBD /* CheckOutProductTableViewCell.xib */,
 			);
 			path = TABLE_CELL;
 			sourceTree = "<group>";
@@ -281,10 +266,9 @@
 		362CA94C29E3B26F00FFEC1E /* COLLECTION_CELL */ = {
 			isa = PBXGroup;
 			children = (
+				36EB5B912A0397C300E45F5E /* Product List */,
 				363B538329E7A83600312FD1 /* BrandListCollectionViewCell.swift */,
 				363B538429E7A83600312FD1 /* BrandListCollectionViewCell.xib */,
-				363B538B29E7AF3B00312FD1 /* DiscountCollectionViewCell.swift */,
-				363B538C29E7AF3B00312FD1 /* DiscountCollectionViewCell.xib */,
 				366D537929E7BE8100324989 /* CategoriesCollectionViewCell.swift */,
 				366D537A29E7BE8100324989 /* CategoriesCollectionViewCell.xib */,
 				36C4A88B29FD0F3B00BD8B1A /* ColorPalleteCollectionViewCell.swift */,
@@ -346,6 +330,78 @@
 				36EB5B8E2A03949100E45F5E /* ListOfProductCategoriesTableViewCell.xib */,
 			);
 			path = "Categories Section";
+			sourceTree = "<group>";
+		};
+		36EB5B912A0397C300E45F5E /* Product List */ = {
+			isa = PBXGroup;
+			children = (
+				363B538B29E7AF3B00312FD1 /* DiscountCollectionViewCell.swift */,
+				363B538C29E7AF3B00312FD1 /* DiscountCollectionViewCell.xib */,
+			);
+			path = "Product List";
+			sourceTree = "<group>";
+		};
+		36EB5B922A03A62300E45F5E /* Brand Section */ = {
+			isa = PBXGroup;
+			children = (
+				36A2DD8529F8E3A400B20EA1 /* BrandListTableViewCell.swift */,
+				36A2DD8629F8E3A500B20EA1 /* BrandListTableViewCell.xib */,
+			);
+			path = "Brand Section";
+			sourceTree = "<group>";
+		};
+		36EB5B932A03A64900E45F5E /* Best Seller Section */ = {
+			isa = PBXGroup;
+			children = (
+				36A2DD8D29F9730400B20EA1 /* BestSellerTableViewCell.swift */,
+				36A2DD8E29F9730400B20EA1 /* BestSellerTableViewCell.xib */,
+			);
+			path = "Best Seller Section";
+			sourceTree = "<group>";
+		};
+		36EB5B942A03A66F00E45F5E /* Discount (30%) Section */ = {
+			isa = PBXGroup;
+			children = (
+				36A2DD8929F9229B00B20EA1 /* DiscountTableViewCell.swift */,
+				36A2DD8A29F9229B00B20EA1 /* DiscountTableViewCell.xib */,
+			);
+			path = "Discount (30%) Section";
+			sourceTree = "<group>";
+		};
+		36EB5B952A03A69900E45F5E /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				36D76A4929E519CC004029C5 /* BannerTableViewCell.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		36EB5B962A03A6B400E45F5E /* ProductDetail Section */ = {
+			isa = PBXGroup;
+			children = (
+				36C4A88329FD0C9100BD8B1A /* ProductImageDetailSectionTableViewCell.swift */,
+				36C4A88429FD0C9100BD8B1A /* ProductImageDetailSectionTableViewCell.xib */,
+				36C4A88729FD0ED800BD8B1A /* DescriptionProductTableViewCell.swift */,
+				36C4A88829FD0ED800BD8B1A /* DescriptionProductTableViewCell.xib */,
+				36C4A88F29FD100200BD8B1A /* ColorPalleteTableViewCell.swift */,
+				36C4A89029FD100200BD8B1A /* ColorPalleteTableViewCell.xib */,
+				362B480729FD1C9500285556 /* CallToActionTableViewCell.swift */,
+				362B480829FD1C9500285556 /* CallToActionTableViewCell.xib */,
+			);
+			path = "ProductDetail Section";
+			sourceTree = "<group>";
+		};
+		36EB5B972A03A6D900E45F5E /* ShoppingChart Section */ = {
+			isa = PBXGroup;
+			children = (
+				3604438B2A001DBE00FBF4C5 /* ShoppingChartTableViewCell.swift */,
+				3604438C2A001DBE00FBF4C5 /* ShoppingChartTableViewCell.xib */,
+				3604438F2A00213B00FBF4C5 /* TotalPriceTableViewCell.swift */,
+				360443902A00213B00FBF4C5 /* TotalPriceTableViewCell.xib */,
+				36EC61F92A0136D000FF9EBD /* CheckOutProductTableViewCell.swift */,
+				36EC61FA2A0136D000FF9EBD /* CheckOutProductTableViewCell.xib */,
+			);
+			path = "ShoppingChart Section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +484,7 @@
 				};
 			};
 			buildConfigurationList = 362CA91229E3B23900FFEC1E /* Build configuration list for PBXProject "my-BeautyStuff-app" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

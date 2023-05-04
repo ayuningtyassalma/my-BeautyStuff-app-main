@@ -9,14 +9,21 @@ import UIKit
 
 protocol LandingPageViewControllerDelegate {
     func navigateToDetail()
+    func navigateToProductListOfCategories()
 }
 
 class LandingPageViewController: UIViewController, LandingPageViewControllerDelegate {
+    
     
     var delegate: LandingPageViewControllerDelegate?
     func navigateToDetail() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "detailProductVc")
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    func navigateToProductListOfCategories() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CategoriesVc")
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -90,6 +97,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
                 return UITableViewCell()}
             print(cell)
             cell.setUpCollectionCell()
+            cell.landingPageDelegate = self
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: BrandListTableViewCell.identifier, for: indexPath) as?
