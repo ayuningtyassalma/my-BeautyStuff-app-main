@@ -11,7 +11,7 @@ protocol ApiServiceProtocol{
     mutating func get(url : URL)
     func callApi<T:Codable>(model: T.Type, completion:@escaping (Result<T, Error>) -> Void)
 }
-struct GetCategoryApi : ApiServiceProtocol {
+struct ApiService : ApiServiceProtocol {
     private var url = URL(string: "")
     mutating func get(url: URL) {
         self.url = url
@@ -29,6 +29,6 @@ struct GetCategoryApi : ApiServiceProtocol {
                     completion(.failure(error))
                 }
             }
-        }
+        }.resume()
     }
 }

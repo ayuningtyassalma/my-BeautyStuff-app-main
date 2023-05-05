@@ -9,35 +9,15 @@ import UIKit
 
 protocol LandingPageViewControllerDelegate {
     func navigateToDetail()
-    func navigateToProductListOfCategories()
+    func navigateToProductListOfCategories(categoryType: String)
 }
 
 class LandingPageViewController: UIViewController, LandingPageViewControllerDelegate {
     
     
     var delegate: LandingPageViewControllerDelegate?
-    func navigateToDetail() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "detailProductVc")
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
-    func navigateToProductListOfCategories() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CategoriesVc")
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-
-    lazy var tableView : UITableView = {
-        let tablevw = UITableView()
-        tablevw.translatesAutoresizingMaskIntoConstraints = false
-//        tablevw.rowHeight = UITableView.automaticDimension
-//        tablevw.estimatedRowHeight = 4
-        tablevw.separatorStyle = .none
-        tablevw.backgroundColor = UIColor(named: "white")
-        tablevw.register(BannerTableViewCell.self, forCellReuseIdentifier: BannerTableViewCell.identifier)
-        return tablevw
-    }()
+    var viewModel : ProductCategoryViewModel?
+    var modelData : [CategoryModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +33,34 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         tableView.register(UINib(nibName: "DiscountTableViewCell", bundle: nil), forCellReuseIdentifier: DiscountTableViewCell.identifier)
         tableView.register(UINib(nibName: "BestSellerTableViewCell", bundle: nil), forCellReuseIdentifier: BestSellerTableViewCell.identifier)
     }
+    
+  
+    
+    func navigateToDetail() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "detailProductVc")
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    func navigateToProductListOfCategories(categoryType: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CategoriesVc") as! CategoriesViewController
+        viewController.categoryType = categoryType
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+
+    lazy var tableView : UITableView = {
+        let tablevw = UITableView()
+        tablevw.translatesAutoresizingMaskIntoConstraints = false
+//        tablevw.rowHeight = UITableView.automaticDimension
+//        tablevw.estimatedRowHeight = 4
+        tablevw.separatorStyle = .none
+        tablevw.backgroundColor = UIColor(named: "white")
+        tablevw.register(BannerTableViewCell.self, forCellReuseIdentifier: BannerTableViewCell.identifier)
+        return tablevw
+    }()
+    
+  
     
 }; extension LandingPageViewController: UITableViewDataSource, UITableViewDelegate{
   

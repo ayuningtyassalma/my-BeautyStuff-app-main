@@ -9,15 +9,15 @@ import Foundation
 
 protocol ProductCategoryViewModelProtocol {
     var urlString : String {get}
-    var bindTypeProductCategory : ((CategoryProduct?)-> ())? {get set}
+    var bindTypeProductCategory : (([CategoryModel]?)-> ())? {get set}
     func fetchDataCategory()
 }
 
 class ProductCategoryViewModel : ProductCategoryViewModelProtocol {
     private var apiService : ApiServiceProtocol?
     var urlString: String
-    var bindTypeProductCategory: ((CategoryProduct?) -> ())?
-    var data : CategoryProduct?
+    var bindTypeProductCategory: (([CategoryModel]?) -> ())?
+    var data : [CategoryModel]?
     
     init(urlString: String, apiService:ApiServiceProtocol){
         self.urlString = urlString
@@ -26,15 +26,17 @@ class ProductCategoryViewModel : ProductCategoryViewModelProtocol {
         if let url = URL(string: urlString){
             self.apiService?.get(url: url)
         }
-        fetchDataCategory()
+//        fetchDataCategory()
     }
     
     func fetchDataCategory() {
-        self.apiService?.callApi(model: CategoryProduct.self, completion: { response in
+        self.apiService?.callApi(model: [CategoryModel]?.self, completion: { response in
             switch response {
             case .success (let success):
+                print("success result \(success)")
                 self.bindTypeProductCategory?(success)
-            case .failure (_):
+            case .failure (let error):
+                print("error: \(error)")
                 self.bindTypeProductCategory?(nil)
             }
             

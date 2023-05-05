@@ -45,6 +45,7 @@
 		36A2DD8C29F9229B00B20EA1 /* DiscountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A2DD8A29F9229B00B20EA1 /* DiscountTableViewCell.xib */; };
 		36A2DD8F29F9730400B20EA1 /* BestSellerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2DD8D29F9730400B20EA1 /* BestSellerTableViewCell.swift */; };
 		36A2DD9029F9730400B20EA1 /* BestSellerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A2DD8E29F9730400B20EA1 /* BestSellerTableViewCell.xib */; };
+		36A4694E2A04AD9100852C36 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 36A4694D2A04AD9100852C36 /* SDWebImage */; };
 		36A5465B2A0353170052A73C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A5465A2A0353170052A73C /* CategoryModel.swift */; };
 		36A5465E2A035D120052A73C /* ProductCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A5465D2A035D120052A73C /* ProductCategoryViewModel.swift */; };
 		36A546602A035E1F0052A73C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A5465F2A035E1F0052A73C /* ApiService.swift */; };
@@ -156,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A4694E2A04AD9100852C36 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +181,7 @@
 		362CA90E29E3B23900FFEC1E = {
 			isa = PBXGroup;
 			children = (
+				36A4694A2A04AB9F00852C36 /* Packages */,
 				362CA91929E3B23900FFEC1E /* my-BeautyStuff-app */,
 				362CA93029E3B23D00FFEC1E /* my-BeautyStuff-appTests */,
 				362CA93A29E3B23D00FFEC1E /* my-BeautyStuff-appUITests */,
@@ -321,6 +324,13 @@
 			path = UserRegisterPage;
 			sourceTree = "<group>";
 		};
+		36A4694A2A04AB9F00852C36 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		36EB5B8C2A0393FA00E45F5E /* Categories Section */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +430,9 @@
 			dependencies = (
 			);
 			name = "my-BeautyStuff-app";
+			packageProductDependencies = (
+				36A4694D2A04AD9100852C36 /* SDWebImage */,
+			);
 			productName = "my-BeautyStuff-app";
 			productReference = 362CA91729E3B23900FFEC1E /* my-BeautyStuff-app.app */;
 			productType = "com.apple.product-type.application";
@@ -492,6 +505,9 @@
 				Base,
 			);
 			mainGroup = 362CA90E29E3B23900FFEC1E;
+			packageReferences = (
+				36A4694C2A04AD9100852C36 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 362CA91829E3B23900FFEC1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -763,8 +779,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC8Y95NA69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "my-BeautyStuff-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -772,13 +790,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "myBeautyStuff.my-BeautyStuff-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.salma.mybeautyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -790,8 +810,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC8Y95NA69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "my-BeautyStuff-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -799,13 +821,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "myBeautyStuff.my-BeautyStuff-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.salma.mybeautyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -819,6 +843,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC8Y95NA69;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -838,6 +863,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC8Y95NA69;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -856,6 +882,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC8Y95NA69;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "myBeautyStuff.my-BeautyStuff-appUITests";
@@ -873,6 +900,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC8Y95NA69;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "myBeautyStuff.my-BeautyStuff-appUITests";
@@ -924,6 +952,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36A4694C2A04AD9100852C36 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36A4694D2A04AD9100852C36 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A4694C2A04AD9100852C36 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 362CA90F29E3B23900FFEC1E /* Project object */;
 }

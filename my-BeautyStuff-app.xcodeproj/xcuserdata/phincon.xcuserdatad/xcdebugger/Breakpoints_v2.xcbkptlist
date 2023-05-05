@@ -88,14 +88,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "84EAC304-D1F1-420B-89E1-569501E65753"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "my-BeautyStuff-app/TABLE_CELL/Categories Section/ListOfProductCategoriesTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "setUpCollectionCell()"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,14 +104,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "49629A0B-D2D4-430A-9EA1-C9932AAF9084"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "my-BeautyStuff-app/TABLE_CELL/Categories Section/ListOfProductCategoriesTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "setUpCollectionCell()"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,48 +120,32 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B820EB48-DE6E-45FA-A5EB-FEAFC5A51F07"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "my-BeautyStuff-app/VIEW_CONTROLLER/CategoriesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "setUpTaableVw()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B820EB48-DE6E-45FA-A5EB-FEAFC5A51F07 - 8ea5b85323853e01"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "my_BeautyStuff_app.CategoriesViewController.setUpTaableVw() -&gt; ()"
-                  moduleName = "my-BeautyStuff-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phincon/Downloads/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/CategoriesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "30">
-               </Location>
-               <Location
-                  uuid = "B820EB48-DE6E-45FA-A5EB-FEAFC5A51F07 - 8ea5b85323853e47"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "my_BeautyStuff_app.CategoriesViewController.setUpTaableVw() -&gt; ()"
-                  moduleName = "my-BeautyStuff-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phincon/Downloads/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/CategoriesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "30">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB080638-9E59-4DAD-9C1A-8C887D0B4A21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-BeautyStuff-app/TABLE_CELL/Categories Section/ListOfProductCategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

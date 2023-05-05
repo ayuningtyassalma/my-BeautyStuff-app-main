@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DiscountCollectionViewCell: UICollectionViewCell {
 
@@ -26,4 +27,11 @@ class DiscountCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var container: UIView!
+    
+    func configureDisc(with product: CategoryModel?) {
+        productIMG.sd_setImage(with: URL(string: product?.image_link ?? ""))
+        productTitle.text = product?.brand
+        productSubtitle.text = product?.name
+        productPrice.text = product?.price
+    }
 }
