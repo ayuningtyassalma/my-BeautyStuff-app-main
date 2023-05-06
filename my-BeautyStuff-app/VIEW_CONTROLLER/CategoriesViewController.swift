@@ -2,7 +2,7 @@
 //  CategoriesViewController.swift
 //  my-BeautyStuff-app
 //
-//  Created by Phincon on 04/05/23.
+//  Created by Salma Ayu on 04/05/23.
 //
 
 import UIKit
