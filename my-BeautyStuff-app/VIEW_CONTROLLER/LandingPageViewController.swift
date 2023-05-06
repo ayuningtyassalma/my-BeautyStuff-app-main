@@ -34,6 +34,8 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         tableView.register(UINib(nibName: "BestSellerTableViewCell", bundle: nil), forCellReuseIdentifier: BestSellerTableViewCell.identifier)
     }
     
+    
+  
   
     
     func navigateToDetail() {
@@ -116,6 +118,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DiscountTableViewCell.identifier, for: indexPath) as? DiscountTableViewCell else {
                 return UITableViewCell()}
             cell.setUpCollectionCell()
+            cell.callApi()
             cell.landingPageDelegate = self
             return cell
         case 4:

@@ -21,6 +21,23 @@ class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionVw: UICollectionView!
     
     var landingPageDelegate: LandingPageViewControllerDelegate?
+    var viewModel : DiscountViewModel?
+    var modelData : [CategoryModel]?
+    
+    func callApi(){
+        self.viewModel = DiscountViewModel(url: "https://makeup-api.herokuapp.com/api/v1/products.json", apiService: ApiService())
+        self.viewModel?.bindDiscountCategory = {modelData in
+            print("tess...\(modelData)")
+            if let data = modelData{
+                self.modelData = data
+            }
+            DispatchQueue.main.async {
+                self.collectionVw.reloadData()
+            }
+        }
+        
+        self.viewModel?.fetchDataDiscount()
+    }
     
     
     func setUpCollectionCell(){
@@ -32,6 +49,7 @@ class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return modelData?.count ?? 0
         return 6
     }
     
@@ -39,6 +57,12 @@ class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         guard let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: DiscountCollectionViewCell.identifier, for: indexPath) as?
                 DiscountCollectionViewCell else {
             return UICollectionViewCell()}
+        let product = modelData?[indexPath.row]
+        cell.configureDisc(with: product)
+            if let passingData = modelData {
+                cell.configureDisc(with: modelData?[indexPath.row])
+            }
+        
         return cell
     }
     
