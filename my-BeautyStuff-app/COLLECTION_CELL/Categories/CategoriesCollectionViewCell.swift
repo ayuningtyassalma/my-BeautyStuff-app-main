@@ -9,14 +9,22 @@ import UIKit
 
 class CategoriesCollectionViewCell: UICollectionViewCell {
 
+   
     static let identifier = "CategoriesCollectionViewCell"
 
     @IBOutlet weak var categoriesIMG: UIImageView!{
         didSet{
-            categoriesIMG.layer.cornerRadius = categoriesIMG.frame.width/2
+            categoriesIMG.layer.cornerRadius = 15
             categoriesIMG.clipsToBounds = true
         }
+        
     }
+
+    
+    
+
+   
+    @IBOutlet weak var categoryTitle: UILabel!
     
     
 }

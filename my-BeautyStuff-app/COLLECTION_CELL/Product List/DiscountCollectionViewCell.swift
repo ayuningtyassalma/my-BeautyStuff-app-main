@@ -23,7 +23,12 @@ class DiscountCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productPrice: UILabel!
     
     
-    @IBOutlet weak var addTochartButton: UIButton!
+    @IBOutlet weak var addTochartButton: UIButton!{
+        didSet{
+            addTochartButton.layer.cornerRadius = 15
+            addTochartButton.clipsToBounds = true
+        }
+    }
     
     
     @IBOutlet weak var container: UIView!

@@ -1,24 +1,26 @@
 //
-//  DiscountViewModel.swift
+//  BestSellerProduct.swift
 //  my-BeautyStuff-app
 //
 //  Created by Salma Ayu on 06/05/23.
 //
 
 import Foundation
-protocol DiscountViewModelProtocol {
+
+protocol BestSellerProductProtocol{
     var url : String {get}
-    var bindDiscountCategory : (([CategoryModel]?)-> ())? {get set}
-    func fetchDataDiscount()
+    var bindBestSellerProduct : (([CategoryModel]?)->())? {get set}
+    func fetchDataBestSeller()
 }
 
-class DiscountViewModel : DiscountViewModelProtocol {
+class BestSellerProduct : BestSellerProductProtocol{
+
     var url: String = ""
     private var apiService : ApiServiceProtocol?
-    var bindDiscountCategory: (([CategoryModel]?) -> ())?
+    var bindBestSellerProduct: (([CategoryModel]?) -> ())?
     var data : [CategoryModel]?
     
-    init(url: String, apiService: ApiServiceProtocol){
+    init(url: String, apiService : ApiServiceProtocol){
         self.url = url
         self.apiService = apiService
         
@@ -27,15 +29,17 @@ class DiscountViewModel : DiscountViewModelProtocol {
         }
     }
     
-    func fetchDataDiscount() {
+    func fetchDataBestSeller() {
         self.apiService?.callApi(model: [CategoryModel]?.self, completion: {response in
-            switch response {
+            switch response{
             case .success(let success):
-                self.bindDiscountCategory?(success)
+                self.bindBestSellerProduct?(success)
             case .failure(let error):
-                self.bindDiscountCategory?(nil)
-
+                self.bindBestSellerProduct?(nil)
             }
+            
         })
     }
+    
+    
 }

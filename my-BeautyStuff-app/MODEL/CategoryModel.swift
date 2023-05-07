@@ -14,8 +14,10 @@ struct CategoryModel: Codable {
     let price: String?
     let price_sign: String?
     let currency: String?
-    let image_link: String
+    let description : String?
+    let image_link: String?
     let product_colors : [Colors]?
+    let product_api_url : String?
 }
 
 struct Colors : Codable{

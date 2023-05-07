@@ -9,15 +9,9 @@ import UIKit
 
 class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
    
-    
-
     static let identifier = "DiscountTableViewCell"
-    
-    
     @IBOutlet weak var sectionTitle: UILabel!
-    
     @IBOutlet weak var seeAllProducts: UILabel!
-    
     @IBOutlet weak var collectionVw: UICollectionView!
     
     var landingPageDelegate: LandingPageViewControllerDelegate?
@@ -49,8 +43,8 @@ class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return modelData?.count ?? 0
-        return 6
+        return modelData?.count ?? 0
+//        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,7 +52,7 @@ class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
                 DiscountCollectionViewCell else {
             return UICollectionViewCell()}
         let product = modelData?[indexPath.row]
-        cell.configureDisc(with: product)
+//        cell.configureDisc(with: product)
             if let passingData = modelData {
                 cell.configureDisc(with: modelData?[indexPath.row])
             }
@@ -77,8 +71,9 @@ class DiscountTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
 //
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         print("tes")
-        self.landingPageDelegate?.navigateToDetail()
+        self.landingPageDelegate?.navigateToDetail(idProduct: modelData?[indexPath.row].id ?? 0)
     }
     
 }

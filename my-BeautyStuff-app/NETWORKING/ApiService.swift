@@ -21,11 +21,14 @@ struct ApiService : ApiServiceProtocol {
         guard let url = self.url else {return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
+            print(error)
             if let data = data{
                 do{
+                    print("sucesss")
                     let modelData = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(modelData))
                 } catch let error {
+                    print("error")
                     completion(.failure(error))
                 }
             }

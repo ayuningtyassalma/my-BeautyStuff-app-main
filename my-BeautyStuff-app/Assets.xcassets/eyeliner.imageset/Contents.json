@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "eyeliner.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LandingPageViewControllerDelegate {
-    func navigateToDetail()
+    func navigateToDetail(idProduct: Int)
     func navigateToProductListOfCategories(categoryType: String)
 }
 
@@ -18,6 +18,18 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     var delegate: LandingPageViewControllerDelegate?
     var viewModel : ProductCategoryViewModel?
     var modelData : [CategoryModel]?
+    var categoryIMG : [CategoryImageModel] = [CategoryImageModel(imageCategory: "blush", titleCategory: "Blush"),
+                                              CategoryImageModel(imageCategory: "bronzer", titleCategory: "Bronzer"),
+                                              CategoryImageModel(imageCategory: "eyebrow", titleCategory: "Eyebrow"),
+                                              CategoryImageModel(imageCategory: "eyeliner", titleCategory: "Eyeliner"),
+                                              CategoryImageModel(imageCategory: "eyeshadows", titleCategory: "eyeshadows"),
+                                              CategoryImageModel(imageCategory: "foundation", titleCategory: "foundation"),
+                                              CategoryImageModel(imageCategory: "lipliner", titleCategory: "lip liner"),
+                                              CategoryImageModel(imageCategory: "lipstick", titleCategory: "lipstick"),
+                                              CategoryImageModel(imageCategory: "mascara", titleCategory: "mascara"),
+                                              CategoryImageModel(imageCategory: "nailpolish", titleCategory: "nail polish")
+                                              
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +47,13 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     }
     
     
-  
-  
-    
-    func navigateToDetail() {
+
+    func navigateToDetail(idProduct: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "detailProductVc")
+        let viewController =
+        storyboard.instantiateViewController(withIdentifier: "detailProductVc") as! DetailsProductViewController
+        viewController.productid = idProduct
+        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     func navigateToProductListOfCategories(categoryType: String) {
@@ -106,6 +119,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.identifier, for: indexPath) as? CategoriesTableViewCell else {
                 return UITableViewCell()}
             print(cell)
+            cell.passingDataCategoryIMG = categoryIMG
             cell.setUpCollectionCell()
             cell.landingPageDelegate = self
             return cell
@@ -124,6 +138,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: BestSellerTableViewCell.identifier, for: indexPath) as? BestSellerTableViewCell else {
                 return UITableViewCell()}
+            cell.callApi()
             cell.setUpCollectionCell()
             return cell
         default:
@@ -138,8 +153,10 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         switch indexPath.section {
         case 0:
             return UITableView.automaticDimension
-        case 1,2:
-            return 200
+        case 1:
+            return 120
+        case 2:
+            return 130
         case 3,4 :
             return 375
         default:

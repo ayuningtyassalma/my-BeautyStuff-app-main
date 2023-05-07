@@ -9,7 +9,7 @@ import UIKit
 
 class CategoriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var landingPageDelegate : LandingPageViewControllerDelegate?
-    
+    var passingDataCategoryIMG : [CategoryImageModel]?
     var categoryType: String = ""
    
     static let identifier = "CategoriesTableViewCell"
@@ -26,8 +26,15 @@ class CategoriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         collectionVw?.delegate = self
         collectionVw?.dataSource = self
 //        collectionVw?.collectionViewLayout = flowlayout
+      
+        
 
         collectionVw?.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CategoriesCollectionViewCell.identifier)
+        if let layout = collectionVw.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+            layout.itemSize = CGSize(width: 200, height: 200)
+            
+        }
     }
     
     
@@ -38,16 +45,33 @@ class CategoriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifier, for: indexPath) as? CategoriesCollectionViewCell else {return UICollectionViewCell()}
+        guard let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifier, for: indexPath) as? CategoriesCollectionViewCell else {return UICollectionViewCell()
+            
+        }
+        if let assignData = passingDataCategoryIMG{
+            cell.categoriesIMG.image = UIImage(named:"\(assignData[indexPath.row].imageCategory)")
+            cell.categoryTitle.text = assignData[indexPath.row].titleCategory 
+            
+        } else{
+            print("no data")
+        }
+        
+    
+     
             return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50, height: 50)
+        return CGSize(width: 90, height: 95)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("tes")

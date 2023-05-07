@@ -13,8 +13,8 @@ class BannerTableViewCell: UITableViewCell {
     private lazy var container : UIView = {
         let cntainer = UIView()
         cntainer.translatesAutoresizingMaskIntoConstraints = false
-        cntainer.layer.borderColor = UIColor.black.cgColor
-        cntainer.layer.borderWidth = 0.5
+//        cntainer.layer.borderColor = UIColor.black.cgColor
+//        cntainer.layer.borderWidth = 0.5
         cntainer.layer.cornerRadius = 20
         cntainer.layer.masksToBounds = true
         return cntainer

@@ -2,7 +2,7 @@
 //  ListOfProductCategoriesTableViewCell.swift
 //  my-BeautyStuff-app
 //
-//  Created by Phincon on 04/05/23.
+//  Created by Salma Ayu on 04/05/23.
 //
 
 import UIKit
@@ -29,11 +29,12 @@ class ListOfProductCategoriesTableViewCell: UITableViewCell, UICollectionViewDat
     
     
     func callApi(for productType: String){
-        self.viewModel = ProductCategoryViewModel(urlString: "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=\(productType)", apiService: ApiService())
+        self.viewModel = ProductCategoryViewModel(urlString: "htps://makeup-api.herokuapp.com/api/v1/products.json?product_type=\(productType)", apiService: ApiService())
         self.viewModel?.bindTypeProductCategory = {modelData in
             print("tes.. \(modelData)")
             if let data = modelData{
                 self.modelData = data
+               
             }
             DispatchQueue.main.async {
                 self.collectionVw.reloadData()

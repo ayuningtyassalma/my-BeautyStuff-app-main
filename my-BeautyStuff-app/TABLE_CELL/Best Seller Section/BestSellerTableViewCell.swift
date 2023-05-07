@@ -10,12 +10,11 @@ import UIKit
 class BestSellerTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
    static let identifier = "BestSellerTableViewCell"
+    var model : [CategoryModel]?
+    var viewModel : BestSellerProduct?
     
     @IBOutlet weak var sectionTitle: UILabel!
-    
     @IBOutlet weak var allProducts: UILabel!
-    
-    
     @IBOutlet weak var collectionVw: UICollectionView!
     
     func setUpCollectionCell(){
@@ -24,13 +23,31 @@ class BestSellerTableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         collectionVw.register(UINib(nibName: "DiscountCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: DiscountCollectionViewCell.identifier)
     }
     
+    func callApi(){
+        self.viewModel = BestSellerProduct(url: "https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=Natural&product_type=bronzer", apiService: ApiService())
+        self.viewModel?.bindBestSellerProduct = {model in
+            print("tes...\(model)")
+            if let data = model{
+                self.model = data
+            }
+            DispatchQueue.main.async {
+                self.collectionVw.reloadData()
+            }
+        }
+        self.viewModel?.fetchDataBestSeller()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return model?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: DiscountCollectionViewCell.identifier, for: indexPath) as? DiscountCollectionViewCell else {
             return UICollectionViewCell()}
+        let product = model?[indexPath.row]
+        if let passingData = model {
+            cell.configureDisc(with: model?[indexPath.row])
+        }
         return cell
     }
    
