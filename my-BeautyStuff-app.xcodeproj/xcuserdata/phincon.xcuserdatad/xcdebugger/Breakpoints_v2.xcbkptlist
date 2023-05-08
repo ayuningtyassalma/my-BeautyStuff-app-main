@@ -78,10 +78,10 @@
             filePath = "my-BeautyStuff-app/VIEW_CONTROLLER/DetailsProductViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "DetailsProductViewController"
-            landmarkType = "3">
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,8 +142,8 @@
             filePath = "my-BeautyStuff-app/TABLE_CELL/Categories Section/ListOfProductCategoriesTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DCC9B3F0-5345-45DB-9A28-F85D0F4D9DDA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "my-BeautyStuff-app/TABLE_CELL/ProductDetail Section/ColorPalleteTableViewCell.swift"
@@ -200,7 +200,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CB666305-4601-4FE6-A0A2-A191ADD7D0F6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "my-BeautyStuff-app/TABLE_CELL/ProductDetail Section/ColorPalleteTableViewCell.swift"
@@ -226,6 +226,114 @@
             endingLineNumber = "30"
             landmarkName = "callApi(idProduct:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "ProfileViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7 - e1aed2e1836cc04e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.ProfileViewController.profileIcon.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7 - 4853b1a785aa9442"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.ProfileViewController.profileIcon.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7 - 86f902c26b996b4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.ProfileViewController.profileIcon.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7 - 9ce3d82c6b3db6cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.ProfileViewController.profileIcon.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7 - 2dc0d8f66959c1a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.ProfileViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; my_BeautyStuff_app.ProfileViewController"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "6D162B8F-9C83-45F2-BAF8-AE045C1018F7 - e904f9ebcfbfb6f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_BeautyStuff_app.ProfileViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;my_BeautyStuff_app.ProfileViewController&gt;"
+                  moduleName = "my-BeautyStuff-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phincon/Desktop/my-BeautyStuff-app-main/my-BeautyStuff-app/VIEW_CONTROLLER/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

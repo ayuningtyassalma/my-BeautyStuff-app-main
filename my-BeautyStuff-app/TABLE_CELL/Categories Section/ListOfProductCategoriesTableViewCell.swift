@@ -29,7 +29,10 @@ class ListOfProductCategoriesTableViewCell: UITableViewCell, UICollectionViewDat
     
     
     func callApi(for productType: String){
-        self.viewModel = ProductCategoryViewModel(urlString: "htps://makeup-api.herokuapp.com/api/v1/products.json?product_type=\(productType)", apiService: ApiService())
+        let urlString = "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=\(productType)"
+        print("urlString List: \(urlString)")
+        
+        self.viewModel = ProductCategoryViewModel(urlString: urlString, apiService: ApiService())
         self.viewModel?.bindTypeProductCategory = {modelData in
             print("tes.. \(modelData)")
             if let data = modelData{

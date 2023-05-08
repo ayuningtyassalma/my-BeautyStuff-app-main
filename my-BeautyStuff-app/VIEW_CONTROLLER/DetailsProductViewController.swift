@@ -36,7 +36,9 @@ class DetailsProductViewController: UIViewController  {
     }
     
     func callApi( idProduct: Int){
-        self.viewModel = DetailsProductViewModel(urlString: "https://makeup-api.herokuapp.com/api/v1/products/\(idProduct).json", apiService: ApiService())
+        urlString = "https://makeup-api.herokuapp.com/api/v1/products/\(idProduct).json"
+        print("urlString: \(urlString)")
+        self.viewModel = DetailsProductViewModel(urlString: urlString, apiService: ApiService())
         self.viewModel?.bindDetailsProduct = {modelData in
             if let data = modelData{
                 self.modelData = data

@@ -10,7 +10,7 @@ import UIKit
 class LogInViewController: UIViewController, LoginTableViewCellDelegate{
 func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let vc = storyboard.instantiateViewController(withIdentifier: "LandingPageVc")
+    let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
     navigationController?.pushViewController(vc, animated: true)
     }
     

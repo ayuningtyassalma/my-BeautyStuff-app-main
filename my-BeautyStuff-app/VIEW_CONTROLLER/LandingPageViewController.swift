@@ -16,7 +16,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     
     
     var delegate: LandingPageViewControllerDelegate?
-    var viewModel : ProductCategoryViewModel?
+   
     var modelData : [CategoryModel]?
     var categoryIMG : [CategoryImageModel] = [CategoryImageModel(imageCategory: "blush", titleCategory: "Blush"),
                                               CategoryImageModel(imageCategory: "bronzer", titleCategory: "Bronzer"),
@@ -33,11 +33,11 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
         
         view.backgroundColor = .white
-    
-    
+        
+        
         setUpTableView()
         setUpNavigationBar()
         tableView.register(UINib(nibName: "BrandListTableViewCell", bundle: nil), forCellReuseIdentifier: BrandListTableViewCell.identifier)
@@ -47,7 +47,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     }
     
     
-
+    
     func navigateToDetail(idProduct: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController =
@@ -63,40 +63,40 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-
+    
     lazy var tableView : UITableView = {
         let tablevw = UITableView()
         tablevw.translatesAutoresizingMaskIntoConstraints = false
-//        tablevw.rowHeight = UITableView.automaticDimension
-//        tablevw.estimatedRowHeight = 4
+        //        tablevw.rowHeight = UITableView.automaticDimension
+        //        tablevw.estimatedRowHeight = 4
         tablevw.separatorStyle = .none
         tablevw.backgroundColor = UIColor(named: "white")
         tablevw.register(BannerTableViewCell.self, forCellReuseIdentifier: BannerTableViewCell.identifier)
         return tablevw
     }()
     
-  
+    
     
 }; extension LandingPageViewController: UITableViewDataSource, UITableViewDelegate{
-  
+    
     func setUpNavigationBar(){
         let titleLabel = UILabel()
-        titleLabel.attributedText = NSAttributedString(string: "My Title", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "pink")])
-//        self.navigationItem.titleView = titleLabel
+        titleLabel.attributedText = NSAttributedString(string: "My Beauty Stuff", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "pink")])
+        //        self.navigationItem.titleView = titleLabel
         self.navigationItem.titleView = titleLabel
         
         //set icon in the left side
         
-
+        
     }
     
-
     
-//    func setUpLeftButtonNavBar(){
-//        //hamburger menu
-//        let hamburgerMenu = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
-//        self.navigationItem.leftBarButtonItem = hamburgerMenu
-//    }
+    
+    //    func setUpLeftButtonNavBar(){
+    //        //hamburger menu
+    //        let hamburgerMenu = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+    //        self.navigationItem.leftBarButtonItem = hamburgerMenu
+    //    }
     
     func setUpTableView(){
         tableView.dataSource = self
@@ -109,7 +109,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
             tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
         ]
-            )
+        )
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -149,8 +149,8 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
             break
         }
         return UITableViewCell()
-    
-     
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -183,7 +183,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
             break
         }
         return 300
-    
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
