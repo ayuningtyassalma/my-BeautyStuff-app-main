@@ -8,7 +8,10 @@
 import UIKit
 
 class ColorPalleteTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-   
+    var urlString: String = ""
+    var modelData: CategoryModel?
+    var viewModel : DetailsProductViewModel?
+    var productid : Int?
     static let identifier = "ColorPalleteTableViewCell"
     
     
@@ -19,7 +22,20 @@ class ColorPalleteTableViewCell: UITableViewCell, UICollectionViewDataSource, UI
     
     @IBOutlet weak var collectionVw: UICollectionView!
     
-    
+    func callApi( idProduct: Int){
+        self.viewModel = DetailsProductViewModel(urlString: "https://makeup-api.herokuapp.com/api/v1/products/\(idProduct).json", apiService: ApiService())
+        self.viewModel?.bindDetailsProduct = {modelData in
+            if let data = modelData{
+                self.modelData = data
+                print("model data testing : \(self.modelData) " )
+            }
+            DispatchQueue.main.async {
+                self.collectionVw.reloadData()
+            }
+        }
+        self.viewModel?.fetchDetailsProduct()
+        
+    }
     
     
     func setUpCollectionCell(){
@@ -41,6 +57,11 @@ class ColorPalleteTableViewCell: UITableViewCell, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionVw.dequeueReusableCell(withReuseIdentifier:ColorPalleteCollectionViewCell.identifier , for: indexPath) as? ColorPalleteCollectionViewCell else{
             return UICollectionViewCell()
+        }
+        print("modelData testing : \(modelData?.product_colors)")
+        if let colourPallete = modelData?.product_colors{
+            
+            cell.configureColourPallete(colourPallete: colourPallete , indexPath: indexPath)
         }
         return cell
     }

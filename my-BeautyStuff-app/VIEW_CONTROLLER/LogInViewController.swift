@@ -7,7 +7,13 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, LoginTableViewCellDelegate{
+func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "LandingPageVc")
+    navigationController?.pushViewController(vc, animated: true)
+    }
+    
    
 
     lazy var tableView : UITableView = {
@@ -75,6 +81,7 @@ class LogInViewController: UIViewController {
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LoginTableViewCell.identifier, for: indexPath) as? LoginTableViewCell else {return UITableViewCell()}
             cell.setUpLoginTableCell()
+            cell.delegate = self
             cell.backgroundColor = UIColor(named: "pink")
             return cell
         default:
@@ -83,13 +90,13 @@ class LogInViewController: UIViewController {
        return UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tes")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateViewController(identifier: "RegisterViewController") as? RegisterViewController {
-            navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("tes")
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let vc = storyboard.instantiateViewController(identifier: "LandingPageVc") as? LandingPageViewController {
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
+//    
     
 }

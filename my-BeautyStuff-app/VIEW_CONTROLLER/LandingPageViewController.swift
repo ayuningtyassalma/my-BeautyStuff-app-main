@@ -37,7 +37,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         
         view.backgroundColor = .white
     
-        
+    
         setUpTableView()
         setUpNavigationBar()
         tableView.register(UINib(nibName: "BrandListTableViewCell", bundle: nil), forCellReuseIdentifier: BrandListTableViewCell.identifier)
@@ -80,10 +80,14 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
 }; extension LandingPageViewController: UITableViewDataSource, UITableViewDelegate{
   
     func setUpNavigationBar(){
-        let navbar : UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 50, width: self.view.frame.size.width, height: 64.0))
-        self.view.addSubview(navbar)
-        let navItem = UINavigationItem(title: "My Beauty Stuff")
-        navbar.setItems([navItem], animated: true)
+        let titleLabel = UILabel()
+        titleLabel.attributedText = NSAttributedString(string: "My Title", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "pink")])
+//        self.navigationItem.titleView = titleLabel
+        self.navigationItem.titleView = titleLabel
+        
+        //set icon in the left side
+        
+
     }
     
 

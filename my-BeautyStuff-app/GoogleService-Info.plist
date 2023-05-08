@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>453567749313-944t2ll1phku93t57ecfh4a3qq133cc9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.453567749313-944t2ll1phku93t57ecfh4a3qq133cc9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyABtnWlzipydV2cfAFOKUBAiMShMrmI0ag</string>
+	<key>GCM_SENDER_ID</key>
+	<string>453567749313</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.salma.mybeautyapp</string>
+	<key>PROJECT_ID</key>
+	<string>my-beautystuff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-beautystuff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:453567749313:ios:599c0eed8cfa5bcadbc840</string>
+</dict>
+</plist>

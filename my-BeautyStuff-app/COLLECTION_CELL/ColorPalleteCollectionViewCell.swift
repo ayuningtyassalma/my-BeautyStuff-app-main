@@ -22,5 +22,9 @@ class ColorPalleteCollectionViewCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var collorpalleteLabel: UILabel!
-    
+    var modelData : CategoryModel?
+    func configureColourPallete(colourPallete: [Colors]?, indexPath: IndexPath){
+        print("colourPallete inside collectionCell: \(colourPallete)")
+        collorpalleteLabel.text = colourPallete?[indexPath.row].colour_name
+}
 }

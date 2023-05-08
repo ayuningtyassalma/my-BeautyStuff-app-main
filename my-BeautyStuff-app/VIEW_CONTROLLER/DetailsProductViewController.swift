@@ -89,6 +89,8 @@ class DetailsProductViewController: UIViewController  {
             }
             cell.productBrand.text = modelData?.brand
             cell.productPrice.text = modelData?.price
+            cell.modelData = modelData
+            cell.productid = productid
             cell.setUpCollectionCell()
             return cell
         case 2:

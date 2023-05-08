@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import Firebase
+
+protocol LoginTableViewCellDelegate: AnyObject{
+    func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell)
+}
 
 class LoginTableViewCell: UITableViewCell {
 static let identifier = "LoginTableViewCell"
+    weak var delegate: LoginTableViewCellDelegate?
     private lazy var stackView : UIStackView = {
         let stckvw = UIStackView()
         stckvw.translatesAutoresizingMaskIntoConstraints = false
@@ -64,9 +70,48 @@ static let identifier = "LoginTableViewCell"
         login.translatesAutoresizingMaskIntoConstraints = false
         login.setTitle("Sign In", for: .normal)
         login.layer.cornerRadius = 15.0
+        login.layer.borderWidth = 1
         login.backgroundColor = UIColor(named: "brown-forInputButton")
+
+        login.addTarget(self, action: #selector(loginBtnTapped(_:)), for: .touchUpInside)
+        
         return login
     }()
+    
+    
+    
+     @objc func loginBtnTapped(_ sender:Any){
+        
+         guard let email = insertUsername.text else { return }
+//             login.backgroundColor = UIColor(named: "brown-forInputButton")
+//             return login}
+             guard let password = insertPassword.text else{ return }
+         delegate?.loginTableViewCellDidTapLoginButton(self)
+//             login.backgroundColor = UIColor(named: "brown-forInputButton")
+//             return  login}
+//         var window = UIApplication.shared.keyWindow
+//         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+//             if let error =  error {
+//                 print(error)
+//             } else{
+//                 print("successfull..\(String(describing: authResult))")
+//                 if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+//
+//                        let rootViewController = window?.rootViewController as? UINavigationController {
+//                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                     let vc = storyboard.instantiateViewController(identifier: "LandingPageVc") as! LandingPageViewController
+//                     rootViewController.pushViewController(vc, animated: true)
+//                 }
+//             }
+//         }
+
+      
+        
+        
+     }
+    
+    
+
     
     private lazy var forgotPassLbl : UILabel = {
         let username = UILabel()
@@ -101,6 +146,7 @@ static let identifier = "LoginTableViewCell"
     
     func setUpLoginTableCell(){
         self.contentView.addSubview(stackView)
+        
         stackView.addArrangedSubview(usernameLbl)
         stackView.addArrangedSubview(insertUsername)
         stackView.addArrangedSubview(passwordLbl)
@@ -135,5 +181,6 @@ static let identifier = "LoginTableViewCell"
         
         
     }
-
+    
+    
 }

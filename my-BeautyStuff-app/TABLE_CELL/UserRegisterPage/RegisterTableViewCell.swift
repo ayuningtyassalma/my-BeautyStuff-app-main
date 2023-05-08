@@ -85,6 +85,7 @@ static let identifier = "RegisterTableViewCell"
         login.setTitle("Sign In", for: .normal)
         login.layer.cornerRadius = 15.0
         login.backgroundColor = UIColor(named: "brown-forInputButton")
+     
         return login
     }()
     
