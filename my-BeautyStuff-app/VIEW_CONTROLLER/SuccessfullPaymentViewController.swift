@@ -16,8 +16,6 @@ class SuccessfullPaymentViewController: UIViewController, UITableViewDelegate, U
         return UITableViewCell()
     }
     
-
-    
     @IBOutlet weak var tableVw: UITableView!
     
     

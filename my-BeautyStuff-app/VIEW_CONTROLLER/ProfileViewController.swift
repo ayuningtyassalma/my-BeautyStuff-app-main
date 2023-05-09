@@ -6,8 +6,27 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
+    @objc func logoutBtnTapped(_sender: Any){
+        let firebaseAuth = Auth.auth()
+        do{
+            try firebaseAuth.signOut()
+        
+        } catch let logoutError as NSError {
+            print(logoutError)
+        }
+        let vc = LogInViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        removeFromParent()
+        
+    }
+    
+    func tappedLogout() {
+        logoutBtn.addTarget(self, action: #selector(self.logoutBtnTapped(_sender:)), for: .touchUpInside)
+ 
+    }
 
     @IBOutlet weak var profileIMG: UIImageView!
     
@@ -28,8 +47,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        tappedLogout()
+        
+        self.navigationController?.isNavigationBarHidden = true
     }
     
 

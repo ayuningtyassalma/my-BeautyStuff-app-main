@@ -20,14 +20,9 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTaableVw()
-        
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
     }
-    
-   
-
     
     func setUpTaableVw(){
         tableView.register(UINib(nibName: "ListOfProductCategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: ListOfProductCategoriesTableViewCell.identifier)
@@ -44,9 +39,6 @@ extension CategoriesViewController : UITableViewDataSource, UITableViewDelegate{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ListOfProductCategoriesTableViewCell.identifier) as? ListOfProductCategoriesTableViewCell else {
                 return UITableViewCell()}
         cell.setUpCollectionCell()
-//        cell.callApi(for: "blush")
-//        cell.callApi(for: "bronzer")
-//        cell.callApi(for: "eyebrow")
         cell.callApi(for: categoryType ?? "")
         
             return cell

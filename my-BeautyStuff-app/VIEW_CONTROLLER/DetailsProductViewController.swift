@@ -9,15 +9,12 @@ import UIKit
 
 
 class DetailsProductViewController: UIViewController  {
-    
-
     lazy var tableView : UITableView = {
        let tableVw = UITableView()
         tableVw.translatesAutoresizingMaskIntoConstraints = false
         tableVw.backgroundColor = UIColor(named: "white")
         return tableVw
     }()
-    
     
     var urlString: String = ""
     var modelData: CategoryModel?
@@ -51,9 +48,6 @@ class DetailsProductViewController: UIViewController  {
         self.viewModel?.fetchDetailsProduct()
         
     }
-    
-    
-
 
 }; extension DetailsProductViewController : UITableViewDataSource, UITableViewDelegate{
    

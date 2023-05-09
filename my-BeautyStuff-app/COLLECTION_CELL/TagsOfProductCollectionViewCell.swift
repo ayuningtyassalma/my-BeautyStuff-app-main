@@ -10,10 +10,7 @@ import UIKit
 class TagsOfProductCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "TagsOfProductCollectionViewCell"
-
-    
     @IBOutlet weak var container: UIView!
-    
     @IBOutlet weak var tagLabel: UILabel!
     
 }

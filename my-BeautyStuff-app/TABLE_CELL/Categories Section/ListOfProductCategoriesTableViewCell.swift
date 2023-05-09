@@ -9,11 +9,6 @@ import UIKit
 import SDWebImage
 
 class ListOfProductCategoriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
-//class ListOfProductCategoriesTableViewCell: UITableViewCell {
-  
-    
-
    static let identifier = "ListOfProductCategoriesTableViewCell"
     
     @IBOutlet weak var collectionVw: UICollectionView!

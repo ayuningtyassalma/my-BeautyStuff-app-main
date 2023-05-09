@@ -8,8 +8,6 @@
 import UIKit
 
 class CheckOutViewController: UIViewController {
-
- 
     lazy var tableView : UITableView = {
         let tableVw = UITableView()
         tableVw.translatesAutoresizingMaskIntoConstraints = false
@@ -25,9 +23,6 @@ class CheckOutViewController: UIViewController {
         tableView.register(UINib(nibName: "TotalPriceTableViewCell", bundle: nil), forCellReuseIdentifier: TotalPriceTableViewCell.identifier)
         tableView.register(UINib(nibName: "CheckOutProductTableViewCell", bundle: nil), forCellReuseIdentifier: CheckOutProductTableViewCell.identifier)
     }
-    
-
-    
 
 }; extension CheckOutViewController : UITableViewDelegate, UITableViewDataSource{
   

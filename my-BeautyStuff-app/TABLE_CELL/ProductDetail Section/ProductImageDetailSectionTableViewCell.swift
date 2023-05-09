@@ -11,7 +11,6 @@ class ProductImageDetailSectionTableViewCell: UITableViewCell {
 
     static let identifier = "ProductImageDetailSectionTableViewCell"
     
-    
     @IBOutlet weak var productIMG: UIImageView!
     
     

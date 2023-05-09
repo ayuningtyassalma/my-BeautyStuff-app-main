@@ -83,31 +83,8 @@ static let identifier = "LoginTableViewCell"
      @objc func loginBtnTapped(_ sender:Any){
         
          guard let email = insertUsername.text else { return }
-//             login.backgroundColor = UIColor(named: "brown-forInputButton")
-//             return login}
              guard let password = insertPassword.text else{ return }
          delegate?.loginTableViewCellDidTapLoginButton(self)
-//             login.backgroundColor = UIColor(named: "brown-forInputButton")
-//             return  login}
-//         var window = UIApplication.shared.keyWindow
-//         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-//             if let error =  error {
-//                 print(error)
-//             } else{
-//                 print("successfull..\(String(describing: authResult))")
-//                 if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-//
-//                        let rootViewController = window?.rootViewController as? UINavigationController {
-//                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                     let vc = storyboard.instantiateViewController(identifier: "LandingPageVc") as! LandingPageViewController
-//                     rootViewController.pushViewController(vc, animated: true)
-//                 }
-//             }
-//         }
-
-      
-        
-        
      }
     
     

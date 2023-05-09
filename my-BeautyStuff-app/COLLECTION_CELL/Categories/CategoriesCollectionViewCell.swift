@@ -17,13 +17,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
             categoriesIMG.layer.cornerRadius = 15
             categoriesIMG.clipsToBounds = true
         }
-        
     }
-
-    
-    
-
-   
     @IBOutlet weak var categoryTitle: UILabel!
     
     

@@ -8,24 +8,12 @@
 import UIKit
 
 class DescriptionProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-  
-    
-
    static let identifier = "DescriptionProductTableViewCell"
     
-    
-   
     @IBOutlet weak var descLabel: UILabel!
-    
-    
     @IBOutlet weak var tagsSection: UILabel!
-    
-   
     @IBOutlet weak var tagsBulletLabel: UILabel!
-    
     @IBOutlet weak var collectionVw: UICollectionView!
-    
-    
     func setUpTagsCollectionCell(){
         collectionVw?.dataSource = self
         collectionVw?.delegate = self

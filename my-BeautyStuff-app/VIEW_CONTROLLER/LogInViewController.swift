@@ -14,14 +14,10 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
     navigationController?.pushViewController(vc, animated: true)
     }
     
-   
-
+    
     lazy var tableView : UITableView = {
         let tableview = UITableView()
         tableview.translatesAutoresizingMaskIntoConstraints = false
-//        tableview.rowHeight = UITableView.automaticDimension
-//        tableview.estimatedRowHeight = 4
-        tableview.separatorStyle = .none
         tableview.backgroundColor = UIColor(named: "pink")
         tableview.register(HeaderTableViewCell.self, forCellReuseIdentifier: HeaderTableViewCell.identifier)
         tableview.register(LoginTableViewCell.self, forCellReuseIdentifier: LoginTableViewCell.identifier)
@@ -31,13 +27,9 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
-        
         view.backgroundColor = UIColor(named: "pink")
-        
     }
     
-
-
 }; extension LogInViewController : UITableViewDataSource, UITableViewDelegate{
     func setUpTableView(){
         tableView.dataSource = self
@@ -80,6 +72,8 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LoginTableViewCell.identifier, for: indexPath) as? LoginTableViewCell else {return UITableViewCell()}
+           
+            
             cell.setUpLoginTableCell()
             cell.delegate = self
             cell.backgroundColor = UIColor(named: "pink")
@@ -89,7 +83,6 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
         }
        return UITableViewCell()
     }
-    
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        print("tes")
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -97,6 +90,7 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
 //            navigationController?.pushViewController(vc, animated: true)
 //        }
 //    }
-//    
+//
+    
     
 }

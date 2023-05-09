@@ -12,27 +12,17 @@ class DiscountCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "DiscountCollectionViewCell"
     
-    
     @IBOutlet weak var productIMG: UIImageView!
-    
     @IBOutlet weak var productTitle: UILabel!
-    
-    
     @IBOutlet weak var productSubtitle: UILabel!
-    
     @IBOutlet weak var productPrice: UILabel!
-    
-    
     @IBOutlet weak var addTochartButton: UIButton!{
         didSet{
             addTochartButton.layer.cornerRadius = 15
             addTochartButton.clipsToBounds = true
         }
     }
-    
-    
     @IBOutlet weak var container: UIView!
-    
     func configureDisc(with product: CategoryModel?) {
         productIMG.sd_setImage(with: URL(string: product?.image_link ?? ""))
         productTitle.text = product?.brand

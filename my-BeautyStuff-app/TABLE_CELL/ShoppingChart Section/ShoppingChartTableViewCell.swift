@@ -19,9 +19,7 @@ class ShoppingChartTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var productName: UILabel!
-    
     @IBOutlet weak var productPrice: UILabel!
-    
     @IBOutlet weak var trashIcon: UIImageView!
     
 }

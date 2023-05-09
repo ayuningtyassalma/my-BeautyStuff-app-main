@@ -8,11 +8,9 @@
 import UIKit
 
 class ColorPalleteCollectionViewCell: UICollectionViewCell {
-
     static let identifier = "ColorPalleteCollectionViewCell"
-
-    @IBOutlet weak var container: UIView!
     
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var collorPallete: UIImageView!{
         didSet{
             collorPallete.layer.cornerRadius = collorPallete.frame.width/2
@@ -22,9 +20,11 @@ class ColorPalleteCollectionViewCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var collorpalleteLabel: UILabel!
+    
     var modelData : CategoryModel?
-    func configureColourPallete(colourPallete: [Colors]?, indexPath: IndexPath){
+    
+    func configureColourPallete(colourPallete: Colors?, indexPath: IndexPath){
         print("colourPallete inside collectionCell: \(colourPallete)")
-        collorpalleteLabel.text = colourPallete?[indexPath.row].colour_name
-}
+        collorpalleteLabel.text = colourPallete?.colour_name
+    }
 }

@@ -33,11 +33,7 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         view.backgroundColor = .white
-        
-        
         setUpTableView()
         setUpNavigationBar()
         tableView.register(UINib(nibName: "BrandListTableViewCell", bundle: nil), forCellReuseIdentifier: BrandListTableViewCell.identifier)
@@ -46,7 +42,13 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
         tableView.register(UINib(nibName: "BestSellerTableViewCell", bundle: nil), forCellReuseIdentifier: BestSellerTableViewCell.identifier)
     }
     
-    
+    func setUpNavigationBar(){
+        let titleLabel = UILabel()
+        titleLabel.attributedText = NSAttributedString(string: "My Beauty Stuff", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "pink")])
+        //        self.navigationItem.titleView = titleLabel
+        self.navigationItem.titleView = titleLabel
+        //set icon in the left side
+    }
     
     func navigateToDetail(idProduct: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -67,8 +69,6 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     lazy var tableView : UITableView = {
         let tablevw = UITableView()
         tablevw.translatesAutoresizingMaskIntoConstraints = false
-        //        tablevw.rowHeight = UITableView.automaticDimension
-        //        tablevw.estimatedRowHeight = 4
         tablevw.separatorStyle = .none
         tablevw.backgroundColor = UIColor(named: "white")
         tablevw.register(BannerTableViewCell.self, forCellReuseIdentifier: BannerTableViewCell.identifier)
@@ -78,26 +78,6 @@ class LandingPageViewController: UIViewController, LandingPageViewControllerDele
     
     
 }; extension LandingPageViewController: UITableViewDataSource, UITableViewDelegate{
-    
-    func setUpNavigationBar(){
-        let titleLabel = UILabel()
-        titleLabel.attributedText = NSAttributedString(string: "My Beauty Stuff", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "pink")])
-        //        self.navigationItem.titleView = titleLabel
-        self.navigationItem.titleView = titleLabel
-        
-        //set icon in the left side
-        
-        
-    }
-    
-    
-    
-    //    func setUpLeftButtonNavBar(){
-    //        //hamburger menu
-    //        let hamburgerMenu = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
-    //        self.navigationItem.leftBarButtonItem = hamburgerMenu
-    //    }
-    
     func setUpTableView(){
         tableView.dataSource = self
         tableView.delegate = self

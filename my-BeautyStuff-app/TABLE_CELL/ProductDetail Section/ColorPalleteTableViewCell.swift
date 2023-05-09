@@ -16,10 +16,7 @@ class ColorPalleteTableViewCell: UITableViewCell, UICollectionViewDataSource, UI
     
     
     @IBOutlet weak var productBrand: UILabel!
-    
     @IBOutlet weak var productPrice: UILabel!
-    
-    
     @IBOutlet weak var collectionVw: UICollectionView!
     
     func callApi( idProduct: Int){
@@ -34,21 +31,17 @@ class ColorPalleteTableViewCell: UITableViewCell, UICollectionViewDataSource, UI
             }
         }
         self.viewModel?.fetchDetailsProduct()
-        
     }
     
     
     func setUpCollectionCell(){
-        
         collectionVw.dataSource = self
         collectionVw.delegate = self
         collectionVw.register(UINib(nibName: "ColorPalleteCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ColorPalleteCollectionViewCell.identifier)
-        
         if let layout = collectionVw.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
         }
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -58,10 +51,13 @@ class ColorPalleteTableViewCell: UITableViewCell, UICollectionViewDataSource, UI
         guard let cell = collectionVw.dequeueReusableCell(withReuseIdentifier:ColorPalleteCollectionViewCell.identifier , for: indexPath) as? ColorPalleteCollectionViewCell else{
             return UICollectionViewCell()
         }
-        print("modelData testing : \(modelData?.product_colors)")
-        if let colourPallete = modelData?.product_colors{
-            
-            cell.configureColourPallete(colourPallete: colourPallete , indexPath: indexPath)
+        DispatchQueue.main.async {
+            print("halo : \(self.modelData?.product_colors?[1])")
+        }
+        if let colourPallete = modelData?.product_colors![indexPath.row]{
+            print("namecolor: \(colourPallete.colour_name)")
+//            cell.configureColourPallete(colourPallete: colourPallete, indexPath: indexPath)
+            cell.collorpalleteLabel.text = colourPallete.colour_name
         }
         return cell
     }

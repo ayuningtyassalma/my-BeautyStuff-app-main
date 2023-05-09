@@ -10,13 +10,8 @@ import UIKit
 class CheckOutProductTableViewCell: UITableViewCell {
 
    static let identifier = "CheckOutProductTableViewCell"
-    
-    
     @IBOutlet weak var totalPrice: UILabel!
-    
     @IBOutlet weak var amount: UILabel!
- 
-    
     @IBOutlet weak var checkoutBtn: UIButton!{
         didSet{
             checkoutBtn.layer.cornerRadius = 15
