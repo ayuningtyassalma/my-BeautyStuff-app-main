@@ -29,8 +29,6 @@ class HeaderTableViewCell: UITableViewCell {
         stckvw.spacing = 4
         stckvw.alignment = .center
         stckvw.distribution = .fillEqually
-//        stckvw.layer.borderColor = UIColor.black.cgColor
-//        stckvw.layer.borderWidth = 1
         return stckvw
     }()
     
@@ -65,16 +63,16 @@ class HeaderTableViewCell: UITableViewCell {
             container.leadingAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             container.trailingAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.trailingAnchor, constant: 0),
          
-            characterIMG.topAnchor.constraint(equalTo: container.topAnchor, constant: 0),
+            characterIMG.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             characterIMG.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 0),
             characterIMG.heightAnchor.constraint(equalToConstant: 160),
             characterIMG.widthAnchor.constraint(equalToConstant: 150),
 
             
-            stackView.topAnchor.constraint(equalTo: container.safeAreaLayoutGuide.bottomAnchor, constant: 130),
+            stackView.topAnchor.constraint(equalTo: container.safeAreaLayoutGuide.topAnchor, constant: 130),
             stackView.leadingAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             stackView.trailingAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.trailingAnchor, constant: -50),
-            stackView.bottomAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            stackView.bottomAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.bottomAnchor, constant: -130),
             
             logoIMG.widthAnchor.constraint(equalToConstant: 100),
             logoIMG.heightAnchor.constraint(equalToConstant: 40),

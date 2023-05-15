@@ -77,4 +77,11 @@ class CheckOutViewController: UIViewController {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "succesfullPaymentVC") as? SuccessfullPaymentViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }

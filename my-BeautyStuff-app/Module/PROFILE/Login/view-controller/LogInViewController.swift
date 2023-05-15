@@ -27,6 +27,7 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        tableView.separatorStyle = .none
         view.backgroundColor = UIColor(named: "pink")
     }
     
@@ -35,9 +36,11 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
         tableView.dataSource = self
         tableView.delegate = self
         self.view.addSubview(tableView)
+        self.navigationController?.isNavigationBarHidden = true
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: -48),
              tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
              tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
              tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
@@ -57,6 +60,16 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row{
+        case 0,1:
+            return UITableView.automaticDimension
+        default:
+            break
+        }
+        return UITableView.automaticDimension
     }
 
     
@@ -83,14 +96,6 @@ func loginTableViewCellDidTapLoginButton(_ cell: LoginTableViewCell) {
         }
        return UITableViewCell()
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("tes")
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let vc = storyboard.instantiateViewController(identifier: "LandingPageVc") as? LandingPageViewController {
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
-//    }
-//
     
     
 }

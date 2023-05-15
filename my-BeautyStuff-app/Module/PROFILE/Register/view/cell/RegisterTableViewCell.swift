@@ -18,14 +18,12 @@ static let identifier = "RegisterTableViewCell"
         stckvw.spacing = 5
         stckvw.alignment = .center
         stckvw.distribution = .fillEqually
-//        stckvw.layer.borderColor = UIColor.black.cgColor
-//        stckvw.layer.borderWidth = 1
         return stckvw
     }()
     
     private lazy var usernameLbl : UILabel = {
         let username = UILabel()
-//        username.translatesAutoresizingMaskIntoConstraints = false
+
         username.text = "Username"
         username.font = .systemFont(ofSize: 16, weight: .semibold)
         username.textColor = .white

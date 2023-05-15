@@ -41,6 +41,22 @@
             </objects>
             <point key="canvasLocation" x="927" y="-710"/>
         </scene>
+        <!--Landing Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LandingPageVc" id="BYZ-38-t0r" customClass="LandingPageViewController" customModule="my_BeautyStuff_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CCe-fc-e3o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958.01526717557249" y="-2.1126760563380285"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="Kgd-fm-ct4">
             <objects>
@@ -192,21 +208,71 @@
             </objects>
             <point key="canvasLocation" x="1905.7971014492755" y="-677.00892857142856"/>
         </scene>
-        <!--Landing Page View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Successfull Payment View Controller-->
+        <scene sceneID="Yw9-up-Db0">
             <objects>
-                <viewController storyboardIdentifier="LandingPageVc" id="BYZ-38-t0r" customClass="LandingPageViewController" customModule="my_BeautyStuff_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="succesfullPaymentVC" id="vXj-sB-AxU" customClass="SuccessfullPaymentViewController" customModule="my_BeautyStuff_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fl-SB-Rrn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="paymentSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-wN-75i">
+                                <rect key="frame" x="20" y="128" width="374" height="212"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Successful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De3-Rg-Dyb">
+                                <rect key="frame" x="10" y="400" width="394" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="textColor" name="pink"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for your payment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14I-DO-1Sf">
+                                <rect key="frame" x="66" y="473.5" width="283" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-1V-9yc">
+                                <rect key="frame" x="66" y="648" width="294" height="31"/>
+                                <color key="backgroundColor" name="brown-forInputButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Co2-mQ-hdv"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back To Home"/>
+                                <connections>
+                                    <action selector="actionEvenWith_sender:" destination="vXj-sB-AxU" eventType="touchUpInside" id="okB-ZG-pNd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="owe-Jz-8vu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="owe-Jz-8vu" firstAttribute="trailing" secondItem="De3-Rg-Dyb" secondAttribute="trailing" constant="10" id="8Xg-jZ-TMc"/>
+                            <constraint firstItem="bgS-wN-75i" firstAttribute="top" secondItem="owe-Jz-8vu" secondAttribute="top" constant="84" id="MPs-3j-2Aw"/>
+                            <constraint firstItem="14I-DO-1Sf" firstAttribute="leading" secondItem="owe-Jz-8vu" secondAttribute="leading" constant="66" id="NgY-4i-wcD"/>
+                            <constraint firstItem="De3-Rg-Dyb" firstAttribute="top" secondItem="bgS-wN-75i" secondAttribute="bottom" constant="60" id="PDh-MZ-EhL"/>
+                            <constraint firstItem="owe-Jz-8vu" firstAttribute="bottom" secondItem="u5R-1V-9yc" secondAttribute="bottom" constant="183" id="PsG-hH-xuG"/>
+                            <constraint firstItem="bgS-wN-75i" firstAttribute="leading" secondItem="owe-Jz-8vu" secondAttribute="leading" constant="20" id="QVJ-nT-2DE"/>
+                            <constraint firstItem="14I-DO-1Sf" firstAttribute="top" secondItem="De3-Rg-Dyb" secondAttribute="bottom" constant="33.5" id="TZm-jg-Dx3"/>
+                            <constraint firstItem="De3-Rg-Dyb" firstAttribute="leading" secondItem="owe-Jz-8vu" secondAttribute="leading" constant="10" id="Vqc-mY-c3O"/>
+                            <constraint firstItem="owe-Jz-8vu" firstAttribute="trailing" secondItem="14I-DO-1Sf" secondAttribute="trailing" constant="65" id="Xkr-if-Jhy"/>
+                            <constraint firstItem="u5R-1V-9yc" firstAttribute="leading" secondItem="owe-Jz-8vu" secondAttribute="leading" constant="66" id="ZNi-xp-ffL"/>
+                            <constraint firstItem="u5R-1V-9yc" firstAttribute="top" relation="lessThanOrEqual" secondItem="14I-DO-1Sf" secondAttribute="bottom" constant="154" id="aYv-el-I90"/>
+                            <constraint firstItem="owe-Jz-8vu" firstAttribute="trailing" secondItem="u5R-1V-9yc" secondAttribute="trailing" constant="54" id="jGJ-20-ARS"/>
+                            <constraint firstItem="owe-Jz-8vu" firstAttribute="trailing" secondItem="bgS-wN-75i" secondAttribute="trailing" constant="20" id="zTJ-NM-mGi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CCe-fc-e3o"/>
+                    <connections>
+                        <outlet property="CTAbtn" destination="u5R-1V-9yc" id="JSH-vp-U60"/>
+                        <outlet property="paymenrSuccessLbl" destination="De3-Rg-Dyb" id="wAX-ys-gc2"/>
+                        <outlet property="successfullpaymentIcon" destination="bgS-wN-75i" id="Nla-Up-wqr"/>
+                        <outlet property="thankyouLbl" destination="14I-DO-1Sf" id="jcg-yW-8uB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRO-NE-Kxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958.01526717557249" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2750.7246376811595" y="-660.26785714285711"/>
         </scene>
         <!--Details Product View Controller-->
         <scene sceneID="iqB-PF-2XH">
@@ -253,36 +319,6 @@
             </objects>
             <point key="canvasLocation" x="958" y="746"/>
         </scene>
-        <!--Successfull Payment View Controller-->
-        <scene sceneID="BNV-79-TJO">
-            <objects>
-                <viewController storyboardIdentifier="SuccessfullPaymentVc" id="X7m-5n-waS" customClass="SuccessfullPaymentViewController" customModule="my_BeautyStuff_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GPf-c6-Sx7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aCp-RN-C04">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Mji-C6-vjb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Mji-C6-vjb" firstAttribute="trailing" secondItem="aCp-RN-C04" secondAttribute="trailing" id="BaR-SE-lCJ"/>
-                            <constraint firstItem="Mji-C6-vjb" firstAttribute="bottom" secondItem="aCp-RN-C04" secondAttribute="bottom" id="VvA-ib-DRM"/>
-                            <constraint firstItem="aCp-RN-C04" firstAttribute="leading" secondItem="Mji-C6-vjb" secondAttribute="leading" id="ca0-Ml-fow"/>
-                            <constraint firstItem="aCp-RN-C04" firstAttribute="top" secondItem="Mji-C6-vjb" secondAttribute="top" id="qC1-7F-6EJ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableVw" destination="aCp-RN-C04" id="Q3o-Jv-rBf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jUI-vk-BYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900" y="758.45070422535218"/>
-        </scene>
         <!--Register View Controller-->
         <scene sceneID="OEO-Yl-qmR">
             <objects>
@@ -321,7 +357,11 @@
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="characterIMG" width="146" height="162"/>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="paymentSuccess" width="215" height="212"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="brown-forInputButton">
+            <color red="0.12549019607843137" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="pink">
             <color red="0.96862745098039216" green="0.54509803921568623" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
